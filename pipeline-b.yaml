@@ -1,0 +1,13 @@
+trigger:
+- none
+
+resources:
+  pipelines:
+  - pipeline: trigger-pipeline
+    source: Trigger pipeline
+    trigger:
+      branches: [master]
+
+steps:
+- script: echo Pipeline B
+  displayName: 'Run a one-line script'
